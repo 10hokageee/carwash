@@ -8,13 +8,26 @@ body {
   font-size: 16px;
   line-height: 150%;
   color: $dark-brown;
-  background-color: #fff;
+  background-color: $white;
 }
 
 .container {
   margin: 0 auto;
   padding: 0 45px;
   max-width: 1200px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .animation {
@@ -43,7 +56,7 @@ body {
 }
 
 .title {
-  color: #fff;
+  color: $white;
   font-size: 50px;
   @extend %poppins-700;
   line-height: 100%;
@@ -57,7 +70,7 @@ body {
     background-image: url("../images/icons/dots.svg");
     width: 49px;
     height: 4px;
-    color: #fff;
+    color: $white;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);

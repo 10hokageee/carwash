@@ -56,7 +56,7 @@
     @extend %transition;
     padding-left: 26px;
     position: relative;
-    color: #fff;
+    color: $white;
 
     & svg {
       @extend %transition;
@@ -66,7 +66,7 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      fill: #fff;
+      fill: $white;
     }
   }
 
@@ -80,7 +80,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: $white;
     font-size: 18px;
     @extend %poppins-400;
   }
@@ -107,7 +107,7 @@
   &__title {
     max-width: 903px;
     width: 100%;
-    color: #fff;
+    color: $white;
     font-size: 80px;
     @extend %poppins-800;
     line-height: 114%;
@@ -117,7 +117,7 @@
 
     & span {
       text-transform: none;
-      color: #fff;
+      color: $white;
       font-size: 44px;
       @extend %poppins-400;
       line-height: 114%;
@@ -145,7 +145,7 @@
     & svg {
       width: 16px;
       height: 31px;
-      stroke: #fff;
+      stroke: $white;
       fill: none;
     }
   }
@@ -166,6 +166,7 @@
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    object-fit: cover;
 
     &::after {
       @extend %transition;
@@ -186,10 +187,15 @@
     }
   }
 
+  &__image{
+    object-fit: cover;
+  }
+
+
   &__link-box {
     position: absolute;
     bottom: 0;
-    color: #292929;
+    color: $dark-brown;
     font-size: 14px;
     @extend %poppins-600;
     transform: translateX(-100%);
@@ -199,7 +205,7 @@
 
   &__link {
     padding: 12px 93px 12px 30px;
-    background-color: #fff;
+    background-color: $white;
     border-radius: 0 22.5px 0 0;
     position: relative;
     @extend %transition;
@@ -227,10 +233,11 @@
 
   &__image {
     border-radius: 10px;
+    object-fit: cover;
   }
 
   &__text {
-    color: #fff;
+    color: $white;
     max-width: 812px;
     width: 100%;
     text-align: center;
@@ -252,7 +259,7 @@
     padding: 40px 65px;
     text-align: left;
     color: $dark-brown;
-    background-color: #fff;
+    background-color: $white;
     border-radius: 10px;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
     position: relative;
@@ -294,7 +301,7 @@
 
 .services {
   text-align: center;
-  background-color: #fff;
+  background-color: $white;
   padding-top: 100px;
   padding-bottom: 50px;
 
@@ -315,7 +322,7 @@
       background-image: url("../images/icons/black-dots.svg");
       width: 49px;
       height: 4px;
-      color: #fff;
+      color: $white;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
@@ -351,11 +358,11 @@
 
     &:hover {
       background-color: $blue;
-      color: #fff;
+      color: $white;
     }
 
     &:hover svg {
-      fill: #fff;
+      fill: $white;
     }
   }
 
@@ -380,8 +387,8 @@
       background-position: center;
       object-fit: cover;
       position: relative;
-      color: #fff;
-
+      color: $white;
+      
       &::after {
         content: "";
         position: absolute;
@@ -475,16 +482,17 @@
   background-position: center;
 
   &__text {
-    color: #fff;
+    color: $white;
     margin-bottom: 40px;
   }
 
   &__inner {
-    background-color: #fff;
+    background-color: $white;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-position: left;
     text-align: left;
+    object-fit: cover;
   }
 
   &__content {
@@ -533,7 +541,7 @@
 }
 
 .footer {
-  color: #fff;
+  color: $white;
   background-color: $dark-blue;
   background-repeat: no-repeat;
   background-position: left;
@@ -592,7 +600,7 @@
 
     & svg {
       height: 20px;
-      fill: #fff;
+      fill: $white;
       @extend %transition;
     }
 
@@ -660,7 +668,7 @@
   &__bottom {
     position: relative;
     opacity: 0.800000011920929;
-    background-color: #000;
+    background-color: $black;
     position: relative;
     z-index: 2;
   }
