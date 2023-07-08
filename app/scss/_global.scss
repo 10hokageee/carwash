@@ -1,0 +1,99 @@
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  @extend %poppins-300;
+  font-size: 16px;
+  line-height: 150%;
+  color: $dark-brown;
+  background-color: #fff;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 45px;
+  max-width: 1200px;
+}
+
+.animation {
+  @extend %transition;
+
+  &:hover {
+    color: $blue;
+  }
+
+  &:hover svg {
+    fill: $blue;
+  }
+}
+
+.logo {
+  @extend %transition;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.wrapper {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 50px;
+  @extend %poppins-700;
+  line-height: 100%;
+  margin-bottom: 34px;
+  padding-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../images/icons/dots.svg");
+    width: 49px;
+    height: 4px;
+    color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.subtitle {
+  color: $blue;
+  font-size: 20px;
+  @extend %poppins-500;
+  margin-bottom: 10px;
+}
+
+.map iframe {
+  height: 700px;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.header-fixed {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 100; 
+  background-color: #000;
+}
+
+.header__wrapper {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  transition: padding 0.4s;
+  z-index: 100;
+}
+
+

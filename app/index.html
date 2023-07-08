@@ -1,16 +1,568 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-  
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clear Truck</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body id="home">
 
+    <header class="header" style="background-image: url(images/preview-bg.jpg)">
+      <div class="header__wrapper">
+      <div class="header__top">
+        <div class="container">
 
-  <script src="js/main.min.js"></script>
-</body>
+          <div class="header__top-inner">
+            <a class="header__logo logo" href="#home">
+              <img
+                class="logo__img"
+                width="269"
+                height="74"
+                src="images/icons/logo.svg"
+                alt="Логотип"
+              />
+            </a>
+
+            <ul class="header__contacts-list">
+              <li class="header__contact-item">
+                <a class="header__contact-link animation" href="#map">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#location"></use>
+                  </svg>
+                  Локация</a
+                >
+                <address class="header__location-address">
+                  г. Домодедово, ул. Логистическая д. 1
+                </address>
+              </li>
+
+              <li class="header__contact-item">
+                <a
+                  class="header__contact-link animation"
+                  href="tel:+7 926 804 81 83"
+                >
+                  <svg>
+                    <use xlink:href="images/sprite.svg#call"></use>
+                  </svg>
+                  Телефон
+                </a>
+                <p class="header__contact-phone">+7 926 804 81 83</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="header__bottom">
+        <div class="container">
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a class="header__menu-link animation" href="#home">Главная</a>
+              </li>
+
+              <li class="header__menu-item">
+                <a class="header__menu-link animation" href="#about">О нас</a>
+              </li>
+
+              <li class="header__menu-item">
+                <a class="header__menu-link animation" href="#services"
+                  >Услуги и цены</a
+                >
+              </li>
+
+              <li class="header__menu-item">
+                <a class="header__menu-link animation" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+</div>
+
+      <div class="container">
+        <div class="header__content">
+          <h1 class="header__title">
+            ВЫСОКОСКОРОСТНАЯ ПОРТАЛЬНАЯ МОЙКА АВТОМАТ
+            <span>Производства Германии</span>
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="wrapper" style="background-image: url(images/bg-section.jpg)">
+        <div class="slider">
+          <div class="container">
+            <ul class="slider__list-items">
+              <li class="slider__list-item">
+                <img
+                  class="slider__image"
+                  src="images/trucks/truck1.jpg"
+                  alt="Изображение машины на мойке"
+                />
+                <div class="slider__link-box">
+                  <a class="slider__link" href="#services"
+                    >Подробнее
+                    <svg>
+                      <use xlink:href="images/sprite.svg#arrow-left-link"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+
+              <li class="slider__list-item">
+                <img
+                  class="slider__image"
+                  src="images/trucks/truck1.jpg"
+                  alt="Изображение машины на мойке"
+                />
+                <div class="slider__link-box">
+                  <a class="slider__link" href="#services"
+                    >Подробнее
+                    <svg>
+                      <use xlink:href="images/sprite.svg#arrow-left-link"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+
+              <li class="slider__list-item">
+                <img
+                  class="slider__image"
+                  src="images/trucks/truck2.jpg"
+                  alt="Изображение машины на мойке"
+                />
+                <div class="slider__link-box">
+                  <a class="slider__link" href="#services"
+                    >Подробнее
+                    <svg>
+                      <use xlink:href="images/sprite.svg#arrow-left-link"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+
+              <li class="slider__list-item">
+                <img
+                  class="slider__image"
+                  src="images/trucks/truck2.jpg"
+                  alt="Изображение машины на мойке"
+                />
+                <div class="slider__link-box">
+                  <a class="slider__link" href="#services"
+                    >Подробнее
+                    <svg>
+                      <use xlink:href="images/sprite.svg#arrow-left-link"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+
+              <li class="slider__list-item">
+                <img
+                  class="slider__image"
+                  src="images/trucks/truck3.jpg"
+                  alt="Изображение машины на мойке"
+                />
+                <div class="slider__link-box">
+                  <a class="slider__link" href="#services"
+                    >Подробнее
+                    <svg>
+                      <use xlink:href="images/sprite.svg#arrow-left-link"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+
+              <li class="slider__list-item">
+                <img
+                  class="slider__image"
+                  src="images/trucks/truck3.jpg"
+                  alt="Изображение машины на мойке"
+                />
+                <div class="slider__link-box">
+                  <a class="slider__link" href="#"
+                    >Подробнее
+                    <svg>
+                      <use xlink:href="images/sprite.svg#arrow-left-link"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <p class="slider__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              mollis aliquam ut porttitor leo a diam sollicitudin tempor.
+              Placerat vestibulum lectus mauris ultrices eros in cursus turpis
+              massa.
+            </p>
+          </div>
+        </div>
+
+        <section class="about" id="about">
+          <div class="container">
+            <p class="about__text-top subtitle">Lorem ipsum dolor sit amet</p>
+            <h2 class="about__title title">О нас</h2>
+            <ul class="about__list-items">
+              <li class="about__list-item">
+                <h3 class="about__list-title">
+                  Надежный
+                  <br />стальной портал
+                </h3>
+                <p class="about__list-text">
+                  Полностью автоматическая и самостоятельно перемещающаяся
+                  моечная установка для автомобилей промышленного назначения
+                  MAGNUM оснащена прочно сваренным стальным порталом с полным
+                  цинкованием огнем для длительного срока эксплуатации.
+                </p>
+              </li>
+              <li class="about__list-item">
+                <h3 class="about__list-title">
+                  Оптимальное давление
+                  <br />прижима щеток
+                </h3>
+                <p class="about__list-text">
+                  Электронное управление моющими валиками (ПЛК) обеспечивает
+                  бережное и эффективное мытье с учетом контуров автомобиля.
+                </p>
+              </li>
+              <li class="about__list-item">
+                <h3 class="about__list-title">
+                  Ходовой механизм с низким полом для полного покрытия
+                  автомобиля
+                </h3>
+                <p class="about__list-text">
+                  В стандартной комплектации все моечные установки для
+                  автомобилей промышленного назначения линейки MAGNUM оснащены
+                  нашим ходовым механизмом с низким полом. Это значит, что
+                  самостоятельно опускаемые автобусы с низким полом можно
+                  полностью мыть боковыми валиками. Расстояние между нижней
+                  кромкой вращающегося бокового валика и верней кромкой пола
+                  составляет всего 175 мм.
+                </p>
+              </li>
+              <li class="about__list-item">
+                <h3 class="about__list-title">
+                  Модульная
+                  <br />
+                  система
+                </h3>
+                <p class="about__list-text">
+                  Благодаря модульной системе, MAGNUM можно дополнять подходящей
+                  машинной оснасткой для любой сферы применения автомойки.
+                  Моечная установка для автомобилей промышленного назначения,
+                  оснащенная в стандартной комплектации 3 валиками, может по
+                  желанию также быть реализована в версии с двумя валиками
+                  (исполнение без верхнего валика).
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <section class="services" id="services">
+        <div class="container">
+          <p class="services__text-top subtitle">Услуги и цены</p>
+          <h2 class="services__title title">Выберете свой план</h2>
+          <p class="services__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+            mollis aliquam ut porttitor leo a diam sollicitudin tempor. Placerat
+            vestibulum lectus mauris ultrices eros in cursus turpis massa.
+          </p>
+
+          <ul class="services__list-items">
+            <li class="services__list-item">
+              <button
+                class="services__list-btn"
+                data-filter="all"
+                type="button"
+              >
+                <svg>
+                  <use xlink:href="images/sprite.svg#bus"></use>
+                </svg>
+                Автобусы
+              </button>
+            </li>
+
+            <li class="services__list-item">
+              <button
+                class="services__list-btn"
+                data-filter=".category-a"
+                type="button"
+              >
+                <svg>
+                  <use xlink:href="images/sprite.svg#bus"></use>
+                </svg>
+                Спецтехника
+              </button>
+            </li>
+
+            <li class="services__list-item">
+              <button
+                class="services__list-btn"
+                data-filter=".category-b"
+                type="button"
+              >
+                <svg>
+                  <use xlink:href="images/sprite.svg#bus"></use>
+                </svg>
+                Грузовики
+              </button>
+            </li>
+
+            <li class="services__list-item">
+              <button
+                class="services__list-btn"
+                data-filter=".category-c"
+                type="button"
+              >
+                <svg>
+                  <use xlink:href="images/sprite.svg#bus"></use>
+                </svg>
+                Тягочи
+              </button>
+            </li>
+          </ul>
+
+          <div class="services__cards">
+            <ul class="services__card-list mix category-b">
+              <li>
+                <h3 class="services__card-title">
+                  Экспресс мойка
+                  <span>999₽</span>
+                </h3>
+              </li>
+              <li class="services__card-info">Наименнование услуги</li>
+              <li class="services__card-info services__card-info--cross">
+                Наименнование услуги
+              </li>
+              <li class="services__card-info services__card-info--cross">
+                Наименнование услуги
+              </li>
+              <li class="services__card-info services__card-info--cross">
+                Наименнование услуги
+              </li>
+              <time class="services__card-time">15 минут</time>
+            </ul>
+
+            <ul class="services__card-list mix category-b">
+              <li>
+                <h3 class="services__card-title">
+                  Стандартная мойка
+                  <span>999₽</span>
+                </h3>
+              </li>
+              <li class="services__card-info">Наименнование услуги</li>
+              <li class="services__card-info services__card-info--cross">
+                Наименнование услуги
+              </li>
+              <li class="services__card-info services__card-info--cross">
+                Наименнование услуги
+              </li>
+              <li class="services__card-info services__card-info--cross">
+                Наименнование услуги
+              </li>
+              <time class="services__card-time">15 минут</time>
+            </ul>
+
+            <ul class="services__card-list mix category-a">
+              <li>
+                <h3 class="services__card-title">
+                  Премиум мойка
+                  <span>999₽</span>
+                </h3>
+              </li>
+              <li class="services__card-info">Наименнование услуги</li>
+              <li class="services__card-info services__card-info--cross">
+                Наименнование услуги
+              </li>
+              <li class="services__card-info services__card-info--cross">
+                Наименнование услуги
+              </li>
+              <li class="services__card-info services__card-info--cross">
+                Наименнование услуги
+              </li>
+              <time class="services__card-time">15 минут</time>
+            </ul>
+
+            <ul
+              class="services__card-list services__card-list--vip mix category-c"
+            >
+              <li>
+                <h3 class="services__card-title">
+                  VIP мойка
+                  <span>999₽</span>
+                </h3>
+              </li>
+              <li class="services__card-info">Наименнование услуги</li>
+              <li class="services__card-info services__card-info--cross">
+                Наименнование услуги
+              </li>
+              <li class="services__card-info services__card-info--cross">
+                Наименнование услуги
+              </li>
+              <li class="services__card-info services__card-info--cross">
+                Наименнование услуги
+              </li>
+              <time class="services__card-time">15 минут</time>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="benefits"
+        style="background-image: url(images/benefits-bg.jpg)"
+      >
+        <div class="container">
+          <p class="benefits__text-top subtitle">Немного о нас</p>
+          <h2 class="benefits__title title">Путь успеха — профессионализм</h2>
+          <p class="benefits__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+            mollis aliquam ut porttitor leo a diam sollicitudin tempor. Placerat
+            vestibulum lectus mauris ultrices eros in cursus turpis massa.
+          </p>
+          <div
+            class="benefits__inner"
+            style="background-image: url(images/benefits-item.jpg)"
+          >
+            <div class="benefits__content">
+              <h3 class="benefits__content-title">Малый заголовок</h3>
+              <p class="benefits__content-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem mollis aliquam ut porttitor leo a diam sollicitudin
+                tempor.
+              </p>
+
+              <h4 class="benefits__content-subtitle">Заголовок преимуществ</h4>
+
+              <ul class="benefits__content-list">
+                <li class="benefits__content-item">Преимущество номер один</li>
+                <li class="benefits__content-item">Преимущество номер один</li>
+                <li class="benefits__content-item">Преимущество номер один</li>
+                <li class="benefits__content-item">Преимущество номер один</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="map" id="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d329.6923979551639!2d38.422875160369124!3d48.908759989052065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDjCsDU0JzMxLjMiTiAzOMKwMjUnMjIuNSJF!5e0!3m2!1sru!2s!4v1688745302624!5m2!1sru!2s"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </main>
+
+    <footer id="contacts" class="footer"
+    style="background-image: url(images/bg-section.jpg);">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__top">
+            <a class="footer__logo logo" href="#home">
+              <img
+                class="logo__img"
+                width="269"
+                height="74"
+                src="images/icons/logo.svg"
+                alt="Логотип"
+              />
+            </a>
+            <p class="footer__top-contact">Присоединяйтесь:</p>
+            <ul class="footer__top-socials">
+              <li class="footer__top-social">
+                <a class="footer__top-sociallink" href="#" target="_blank">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ic-facebook"></use>
+                  </svg> 
+                </a>
+              </li>
+
+              <li class="footer__top-social">
+                <a class="footer__top-sociallink" href="#" target="_blank">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ic-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="footer__top-social">
+                <a class="footer__top-sociallink" href="#" target="_blank">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ic-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="footer__content">
+            <div class="footer__about">
+              <h3 class="footer__title">О нас</h3>
+              <p class="footer__about-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <a class="footer__about-link animation" href="#">Подробнее</a>
+            </div>
+
+            <div class="footer__contacts">
+              <h3 class="footer__title">Контакты</h3>
+              <ul class="footer__contacts-items">
+                <li class="footer__contacts-item">
+                  Позвоните:
+                  <a class="footer__contacts-link animation" href="tel:+7(926)8048183"
+                    >+7 (926) 804 81 83</a
+                  >
+                </li>
+                <li class="footer__contacts-item">
+                  Напишите:
+                  <a class="footer__contacts-link animation" href="mailto:mail@mail.com"
+                    >mail@mail.com</a
+                  >
+                </li>
+                <li class="footer__contacts-item">
+                  Приезжайте:
+                  <a class="footer__contacts-link animation" href="#"
+                    >г. Домодедово, ул. Логистическая д. 1</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__time">
+              <h3 class="footer__title">Рабочее время</h3>
+              <p class="footer__subtitle">Круглосуточно — <span>24/7</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+             <div class="container">
+              <div class="footer__bottom-inner">
+                <p class="footer__bottom-text">Политика конфиденциальности</p>
+                <p class="footer__bottom-copyright">© clean-track, 2021</p>
+                <a class="footer__bottom-link animation" href="#home">Наверх</a> 
+              </div>
+             </div> 
+      </div>
+
+    </footer>
+
+    <script src="js/main.min.js"></script>
+  </body>
 </html>

@@ -1,0 +1,39 @@
+$dark-blue: #061321;
+$blue: #00A3FF;
+$dark-brown: #212121;
+$yellow: #F9BF2A;
+$text-gray: #69778A;
+
+%poppins-300 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+%poppins-700 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+%poppins-800 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+%poppins-500 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+%poppins-400 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+%poppins-600 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+%transition {
+  transition: text-decoration 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out, fill 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, translate 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
