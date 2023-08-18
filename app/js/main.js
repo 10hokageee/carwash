@@ -36,8 +36,42 @@ $(window).on("scroll", function (){
 	}
 });
 
+});
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger'); 
+  burger.addEventListener('click', () => {
+  burger.classList.toggle('burger--active');	
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const burger = document.querySelector('.burger'); 
+  const mobileMenu = document.querySelector('.burger-menu'); 
+  const bodyLock = document.querySelector('body'); 
+
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('burger-menu--active'); 
+    if (mobileMenu.classList.contains('burger-menu--active'))  { 
+      burger.classList.add('burger--active'); 
+      bodyLock.classList.add('lock'); 
+    }
+    else { 
+      burger.classList.remove('burger--active'); 
+      bodyLock.classList.remove('lock'); 
+    }
+  });
+});
+
+document.addEventListener('click', function (e) {
+	if (e.target !== burger && e.target !== mobileMenu) {
+		burger.classList.remove('burger--active');
+		mobileMenu.classList.remove('menu--active');
+		bodyLock.classList.remove('lock');
+	}
 });
 
 var mixitup = mixitup('.services__cards');

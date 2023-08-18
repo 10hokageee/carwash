@@ -1,3 +1,5 @@
+@import 'mixin';
+
 $dark-blue: #061321;
 $blue: #00A3FF;
 $dark-brown: #212121;
@@ -5,7 +7,10 @@ $yellow: #F9BF2A;
 $text-gray: #69778A;
 $white: #fff;
 $black: #000;
-
+$burgerWidth: 40px;
+$burgerHeight: 25px; 
+$burgerLineHeight: 2px; 
+$burgerColor: #ffffff; 
 
 %poppins-300 {
   font-family: 'Poppins', sans-serif;
@@ -40,3 +45,10 @@ $black: #000;
 %transition {
   transition: text-decoration 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out, fill 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, translate 0.3s ease-in-out, stroke 0.3s ease-in-out;
 }
+
+$breakpoints: (
+  "phone": 560px,
+  "tablet": 768px,
+  "tablet-2": 992px,
+  "desktop": 1230px
+);
