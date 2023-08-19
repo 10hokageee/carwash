@@ -6,7 +6,6 @@
 @import "mixin";
 @import "libs";
 
-
 .header {
   min-height: 100vh;
   background-position: center;
@@ -28,8 +27,8 @@
   &__top {
     background-color: rgba(6, 19, 33, 0.9);
 
-    @include mq ('desktop') {
-    background-color: $dark-blue;
+    @include mq("desktop") {
+      background-color: $dark-blue;
     }
   }
 
@@ -41,10 +40,13 @@
     z-index: 2;
     position: relative;
 
-    
-  @include mq('desktop') {
-   padding: 18px 0;
-  }
+    @include mq("desktop") {
+      padding: 18px 0;
+    }
+
+    @include mq("tablet-2") {
+      padding: 10px 0;
+    }
   }
 
   &__logo {
@@ -52,36 +54,8 @@
     padding: 18px 0;
     z-index: 2;
 
-    @include mq('desktop') {
-     padding: 0;
-    }
-  }
-
-  &__contacts-list {
-    display: flex;
-  }
-
-  &__contact-item {
-    &:not(:last-child) {
-      margin-right: 124px;
-    }
-  }
-
-  &__contact-link {
-    @extend %transition;
-    padding-left: 26px;
-    position: relative;
-    color: $white;
-
-    & svg {
-      @extend %transition;
-      position: absolute;
-      width: 19px;
-      height: 19px;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      fill: $white;
+    @include mq("desktop") {
+      padding: 0;
     }
   }
 
@@ -90,8 +64,8 @@
     position: relative;
     z-index: 100;
 
-    @include mq ('desktop') {
-   display: none;
+    @include mq("desktop") {
+      display: none;
     }
   }
 
@@ -142,15 +116,31 @@
       line-height: 114%;
       display: block;
 
-      @include mq ('desktop') {
+      @include mq("desktop") {
         font-size: 38px;
         margin-top: 15px;
-       }
+      }
+
+      @include mq("tablet-2") {
+        font-size: 33px;
+      }
+
+      @include mq("tablet") {
+        font-size: 28px;
+      }
     }
 
-    @include mq ('desktop') {
+    @include mq("desktop") {
       font-size: 60px;
-     }
+    }
+
+    @include mq("tablet-2") {
+      font-size: 50px;
+    }
+
+    @include mq("tablet") {
+      font-size: 35px;
+    }
   }
 }
 
@@ -216,10 +206,9 @@
     }
   }
 
-  &__image{
+  &__image {
     object-fit: cover;
   }
-
 
   &__link-box {
     position: absolute;
@@ -258,6 +247,10 @@
     &:hover svg {
       stroke: $blue;
     }
+
+    @include mq("tablet-2") {
+      padding: 9px 69px 9px 25px;
+    }
   }
 
   &__image {
@@ -282,6 +275,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
+
+    @include mq("tablet") {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__list-item {
@@ -311,6 +308,14 @@
     &:hover.about__list-item::after {
       transform: translateX(0);
     }
+
+    @include mq("desktop") {
+      padding: 20px 35px;
+    }
+
+    @include mq("tablet-2") {
+      padding: 13px 19px;
+    }
   }
 
   &__list-title {
@@ -333,6 +338,10 @@
   background-color: $white;
   padding-top: 100px;
   padding-bottom: 50px;
+
+  @include mq("tablet-2") {
+    padding-top: 80px;
+  }
 
   &__text {
     max-width: 812px;
@@ -361,6 +370,11 @@
   &__list-items {
     display: flex;
     justify-content: space-around;
+
+    @include mq("tablet") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__list-item {
@@ -374,6 +388,10 @@
     padding: 50px 32px 15px 32px;
     border-radius: 4px;
     @extend %transition;
+
+    @include mq("tablet") {
+      padding: 50px 27px 15px 28px;
+    }
 
     & svg {
       width: 100px;
@@ -397,13 +415,44 @@
 
   &__cards {
     display: flex;
-    justify-content: space-between;
+
+    @include mq("desktop") {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__card-list {
-    padding: 39px 43px;
+    padding: 39px 28px;
     border-radius: 10px;
     @extend %transition;
+    max-width: 255px;
+
+    @include mq("tablet") {
+      margin-right: 15px;
+      padding: 39px 46px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+      @include mq("tablet-2") {
+        margin-right: 0;
+      }
+
+      @include mq("tablet") {
+        margin-right: 15px;
+      }
+    }
+
+    &:last-child {
+      @include mq("tablet") {
+        margin-right: 15px;
+      }
+    }
+
+    @include mq("desktop") {
+      margin-bottom: 30px;
+    }
 
     &:hover {
       box-shadow: 0 0 0 2px rgba(0, 163, 255, 1);
@@ -417,7 +466,7 @@
       object-fit: cover;
       position: relative;
       color: $white;
-      
+
       &::after {
         content: "";
         position: absolute;
@@ -510,6 +559,13 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @include mq("tablet-2") {
+    padding-top: 90px;
+  }
+
+  @include mq("desktop") {
+  }
+
   &__text {
     color: $white;
     margin-bottom: 40px;
@@ -522,12 +578,36 @@
     background-position: left;
     text-align: left;
     object-fit: cover;
+
+    @include mq("tablet") {
+      background-size: 0 0;
+    }
+
+    @include mq("desktop") {
+      background-size: 0 0;
+    }
+
+    @include mq("trablet-2") {
+      background-size: 0 0;
+    }
   }
 
   &__content {
     margin-left: auto;
     max-width: 445px;
     padding: 59px 65px;
+
+    @include mq("tablet") {
+      margin: 0 auto;
+    }
+
+    @include mq("desktop") {
+      margin: 0 auto;
+    }
+
+    @include mq("trablet-2") {
+      margin: 0 auto;
+    }
   }
 
   &__content-title {
@@ -579,8 +659,8 @@
     position: relative;
 
     &::after {
-      content: '';
-      background-image: url('../images/icons/waves.svg');
+      content: "";
+      background-image: url("../images/icons/waves.svg");
       position: absolute;
       width: 188px;
       height: 71px;
@@ -603,6 +683,10 @@
 
   &__top-contact {
     margin-right: 30px;
+
+    @include mq("tablet") {
+      display: none;
+    }
   }
 
   &__top-socials {
@@ -611,7 +695,6 @@
   }
 
   &__top-social {
-
     &:not(:last-child) {
       margin-right: 14px;
     }
@@ -636,7 +719,6 @@
     &:hover {
       background-color: $blue;
     }
-
   }
 
   &__content {
@@ -644,6 +726,16 @@
     grid-template-columns: 327px 370px 206px;
     gap: 40px;
     padding-bottom: 51px;
+
+    @include mq("desktop") {
+      gap: 22px;
+      grid-template-columns: 308px 358px 187px;
+    }
+
+    @include mq("tablet-2") {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__title {
@@ -664,6 +756,12 @@
     }
   }
 
+  &__about {
+    @include mq("tablet-2") {
+      margin-bottom: 20px;
+    }
+  }
+
   &__about-text {
     margin-bottom: 24px;
     font-size: 14px;
@@ -676,6 +774,12 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  &__contacts {
+    @include mq("tablet") {
+      margin-bottom: 20px;
     }
   }
 

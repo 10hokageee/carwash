@@ -4,7 +4,32 @@ $(function () {
       slidesToShow: 3,
       slidesToScroll: 3,
       prevArrow: '<button type="button" class="slick-next"><svg><use xlink:href="images/sprite.svg#arrow-next"></use></svg></button>',
-      nextArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="images/sprite.svg#arrow-prev"></use></svg></button>'
+      nextArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="images/sprite.svg#arrow-prev"></use></svg></button>',
+
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: false,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
   });
 
 
@@ -38,6 +63,29 @@ $(window).on("scroll", function (){
 
 });
 
+document.addEventListener('click', function (e) {
+	if (e.target !== burger && e.target !== mobileMenu) {
+		burger.classList.remove('burger--active');
+		mobileMenu.classList.remove('menu--active');
+		bodyLock.classList.remove('lock');
+	}
+});
+
+document.addEventListener("click", (e) => {
+  let target = e.target;
+  let its_menu = target == mobileMenu || mobileMenu.contains(target);
+  let its_hamburger = target == burger;
+  let menu_is_active = mobileMenu.classList.contains(
+    "header__burger-nav--active"
+  );
+
+  if (!its_menu && !its_hamburger && menu_is_active) {
+    mobileMenu.classList.remove("burger");
+    bodyLock.classList.remove("lock");
+    burger.classList.remove("burger--active");
+  }
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger'); 
@@ -66,13 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.addEventListener('click', function (e) {
-	if (e.target !== burger && e.target !== mobileMenu) {
-		burger.classList.remove('burger--active');
-		mobileMenu.classList.remove('menu--active');
-		bodyLock.classList.remove('lock');
-	}
-});
+
 
 var mixitup = mixitup('.services__cards');
 

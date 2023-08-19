@@ -3,7 +3,6 @@
 html,
 body {
   min-height: 100vh;
-  // overflow-x: hidden;
 }
 
 body {
@@ -12,6 +11,11 @@ body {
   line-height: 150%;
   color: $dark-brown;
   background-color: $white;
+  z-index: 300;
+
+  @include mq("tablet-2") {
+    font-size: 14px;
+    }
 }
 
 .container {
@@ -78,6 +82,10 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
+
+  @include mq('tablet-2') {
+    font-size: 40px;
+   }
 }
 
 .subtitle {
@@ -85,6 +93,10 @@ body {
   font-size: 20px;
   @extend %poppins-500;
   margin-bottom: 10px;
+
+  @include mq('tablet-2') {
+    font-size: 17px;
+   }
 }
 
 .map iframe {
@@ -118,7 +130,7 @@ body {
     top: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 99;
+    z-index: 11;
   }
 }
 
@@ -148,4 +160,96 @@ body {
   &--active {
     transform: translateX(0);
   }
+
+  &__items {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    color: $white;
+    font-size: 18px;
+    line-height: normal;
+    @extend %poppins-400;
+
+    &:not(:last-child){
+      padding-bottom: 10px;
+    }
+  }
+
+  @include mq('tablet-2') {
+    top: 80px;
+   }
 }
+
+.contacts-socials {
+  display: flex;
+  align-items: center;
+
+  &__social {
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+  }
+
+  &__sociallink {
+    border-radius: 50%;
+    width: 39px;
+    height: 39px;
+    @extend %transition;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    & svg {
+      height: 20px;
+      fill: $white;
+      @extend %transition;
+    }
+
+    &:hover {
+      background-color: $blue;
+    }
+  }
+}
+
+.contacts-list {
+  display: flex;
+
+  @include mq("tablet-2") {
+    display: none;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 124px;
+  
+      @include mq("desktop") {
+        margin-right: 90px;
+      }
+    }
+  }
+  
+  &__link {
+    @extend %transition;
+    padding-left: 26px;
+    position: relative;
+    color: $white;
+  
+    & svg {
+      @extend %transition;
+      position: absolute;
+      width: 19px;
+      height: 19px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      fill: $white;
+    }
+  }
+}
+
+
+
+
