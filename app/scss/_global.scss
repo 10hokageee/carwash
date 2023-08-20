@@ -11,11 +11,11 @@ body {
   line-height: 150%;
   color: $dark-brown;
   background-color: $white;
-  z-index: 300;
+  z-index: 999;
 
   @include mq("tablet-2") {
     font-size: 14px;
-    }
+  }
 }
 
 .container {
@@ -83,9 +83,13 @@ body {
     transform: translateX(-50%);
   }
 
-  @include mq('tablet-2') {
+  @include mq("tablet-2") {
     font-size: 40px;
-   }
+  }
+
+  @include mq("phone") {
+    font-size: 30px;
+  }
 }
 
 .subtitle {
@@ -94,9 +98,13 @@ body {
   @extend %poppins-500;
   margin-bottom: 10px;
 
-  @include mq('tablet-2') {
+  @include mq("tablet-2") {
     font-size: 17px;
-   }
+  }
+
+  @include mq("phone") {
+    font-size: 14px;
+  }
 }
 
 .map iframe {
@@ -170,15 +178,12 @@ body {
     font-size: 18px;
     line-height: normal;
     @extend %poppins-400;
-
-    &:not(:last-child){
-      padding-bottom: 10px;
-    }
+    padding: 10px 0;
   }
 
-  @include mq('tablet-2') {
+  @include mq("tablet-2") {
     top: 80px;
-   }
+  }
 }
 
 .contacts-socials {
@@ -221,22 +226,21 @@ body {
   }
 
   &__item {
-
     &:not(:last-child) {
       margin-right: 124px;
-  
+
       @include mq("desktop") {
         margin-right: 90px;
       }
     }
   }
-  
+
   &__link {
     @extend %transition;
     padding-left: 26px;
     position: relative;
     color: $white;
-  
+
     & svg {
       @extend %transition;
       position: absolute;
@@ -249,7 +253,3 @@ body {
     }
   }
 }
-
-
-
-

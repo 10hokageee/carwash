@@ -32,8 +32,14 @@ $(function () {
       ]
   });
 
+  $(".burger-menu, .burger-menu__link").on("click", function () {
+    $(".burger-menu").toggleClass("burger-menu--active");
+    $(".burger").toggleClass("burger--active");
+    $("body").toggleClass("lock");
+  });
 
-$(".header__menu-link, .footer__bottom-link, .logo, .slider__link, .header__contact-link").on("click", function(event){
+
+$(".header__menu-link, .burger-menu__link, .footer__bottom-link, .logo, .slider__link, .header__contact-link").on("click", function(event){
 	event.preventDefault();
 	const scrollAnchor = $(this).attr("href");
 	let scrollPoint = $(scrollAnchor).offset().top;
@@ -63,29 +69,6 @@ $(window).on("scroll", function (){
 
 });
 
-document.addEventListener('click', function (e) {
-	if (e.target !== burger && e.target !== mobileMenu) {
-		burger.classList.remove('burger--active');
-		mobileMenu.classList.remove('menu--active');
-		bodyLock.classList.remove('lock');
-	}
-});
-
-document.addEventListener("click", (e) => {
-  let target = e.target;
-  let its_menu = target == mobileMenu || mobileMenu.contains(target);
-  let its_hamburger = target == burger;
-  let menu_is_active = mobileMenu.classList.contains(
-    "header__burger-nav--active"
-  );
-
-  if (!its_menu && !its_hamburger && menu_is_active) {
-    mobileMenu.classList.remove("burger");
-    bodyLock.classList.remove("lock");
-    burger.classList.remove("burger--active");
-  }
-});
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger'); 
@@ -94,13 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const burger = document.querySelector('.burger'); 
+const mobileMenu = document.querySelector('.burger-menu'); 
+const bodyLock = document.querySelector('body'); 
+
 document.addEventListener('DOMContentLoaded', () => {
-
-  
-  const burger = document.querySelector('.burger'); 
-  const mobileMenu = document.querySelector('.burger-menu'); 
-  const bodyLock = document.querySelector('body'); 
-
   burger.addEventListener('click', () => {
     mobileMenu.classList.toggle('burger-menu--active'); 
     if (mobileMenu.classList.contains('burger-menu--active'))  { 
@@ -113,6 +94,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+document.addEventListener('click', function (e) {
+  if (e.target !== burger && e.target !== mobileMenu) {
+    burger.classList.remove('burger--active');
+    mobileMenu.classList.remove('burger-menu--active');
+    bodyLock.classList.remove('lock');
+  }
+});
+
+
 
 
 
